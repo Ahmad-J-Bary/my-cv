@@ -1,709 +1,403 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ahmad Abdelbary - Professional CV</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: 'Roboto', sans-serif;
-            color: #333;
-            line-height: 1.6;
-            background: white;
-            min-height: 100vh;
-            display: flex;
-            justify-content: center;
-        }
-        
-        .a4-container {
-            max-width: 1150px;
-            background: white;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            overflow: hidden;
-            width: 100vw;
-        }
-        
-        .header {
-            background: #1a73e8;
-            color: white;
-            padding: 30px 40px;
-            display: flex;
-            flex-wrap: wrap;
-        }
-        
-        .profile-container {
-            display: flex;
-            align-items: flex-start;
-            gap: 30px;
-            width: 100%;
-            margin-bottom: 20px;
-        }
-        
-        .profile-picture {
-            width: 220px;
-            height: 220px;
-            border-radius: 50%;
-            border: 4px solid rgba(255, 255, 255, 0.3);
-            background: white;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            overflow: hidden;
-            flex-shrink: 0;
-        }
-        
-        .profile-picture img {
-            width: 120%;
-            height: 120%;
-            object-fit: cover;
-        }
-        
-        .name-title {
-            flex: 1;
-            padding-top: 10px;
-        }
-        
-        .name-title h1 {
-            font-family: 'Poppins', sans-serif;
-            font-size: 40px;
-            font-weight: 700;
-            margin-bottom: 8px;
-        }
-        
-        .name-title h2 {
-            font-size: 24px;
-            font-weight: 400;
-            opacity: 0.9;
-            margin-bottom: 20px;
-        }
-        
-        .profile-text {
-            font-size: 18px;
-            line-height: 1.7;
-            color: rgba(255, 255, 255, 0.9);
-            width: 800px;
-            text-align: justify;
-        }
-        
-        .contact-social-container {
-            display: flex;
-            width: 100%;
-            justify-content: space-between;
-            align-items: flex-end;
-        }
-        
-        .contact-info {
-            text-align: left;
-        }
-        
-        .contact-info p {
-            margin: 8px 0;
-            font-size: 16px;
-            display: flex;
-            align-items: center;
-        }
-        
-        .contact-info i {
-            width: 22px;
-            text-align: center;
-            margin-right: 12px;
-            font-size: 18px;
-        }
-        
-        .social-links-header {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 15px;
-            justify-content: flex-end;
-        }
-        
-        .social-link-header {
-            display: flex;
-            align-items: center;
-            font-size: 16px;
-            color: white;
-            text-decoration: none;
-            padding: 8px 15px;
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 3px;
-        }
-        
-        .social-link-header i {
-            margin-right: 8px;
-            font-size: 18px;
-        }
-        
-        .content {
-            display: flex;
-            padding: 0;
-            height: auto;
-        }
-        
-        .left-column {
-            width: 385px;
-            background: #f8f9fa;
-            padding: 30px;
-            border-right: 1px solid #eaeaea;
-        }
-        
-        .right-column {
-            width: 715px;
-            padding: 30px;
-        }
-        
-        .section {
-            margin-bottom: 25px;
-        }
-        
-        .section-title {
-            font-family: 'Poppins', sans-serif;
-            font-size: 24px;
-            color: #1a73e8;
-            padding-bottom: 8px;
-            margin-bottom: 15px;
-            border-bottom: 1px solid #e0e0e0;
-        }
-        
-        .skills-grid {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 15px;
-        }
-        
-        .skill-category {
-            margin-bottom: 10px;
-        }
-        
-        .skill-category h3 {
-            font-size: 18px;
-            color: #1a73e8;
-            margin-bottom: 8px;
-            display: flex;
-            align-items: center;
-        }
-        
-        .skill-category h3 i {
-            margin-right: 8px;
-            color: #1a73e8;
-            font-size: 16px;
-        }
-        
-        .skills-list {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 5px;
-        }
-        
-        .skill-item {
-            background: white;
-            border: 1px solid #e0e0e0;
-            border-radius: 3px;
-            padding: 4px 8px;
-            font-size: 14px;
-        }
-        
-        .education-item {
-            margin-bottom: 20px;
-        }
-        
-        .education-header {
-            display: flex;
-            align-items: baseline;
-            gap: 15px;
-            margin-bottom: 5px;
-        }
-        
-        .education-period {
-            font-weight: 600;
-            color: #1a73e8;
-            font-size: 16px;
-            width: 120px;
-        }
-        
-        .education-title {
-            font-weight: 600;
-            font-size: 18px;
-            color: #1a73e8;
-        }
-        
-        .education-title a {
-            color: #1a73e8;
-            text-decoration: none;
-        }
-        
-        .education-description {
-            font-size: 16px;
-            color: #555;
-            line-height: 1.6;
-            margin-top: 8px;
-            padding-left: 135px;
-            text-align: justify;
-        }
-        
-        .project-item {
-            margin-bottom: 20px;
-            padding-bottom: 20px;
-        }
-        
-        .project-item:not(:last-child) {
-            border-bottom: 1px solid #eaeaea;
-        }
-        
-        .project-header {
-            display: flex;
-            align-items: baseline;
-            gap: 15px;
-            margin-bottom: 5px;
-        }
-        
-        .project-title {
-            font-weight: 600;
-            font-size: 18px;
-            color: #1a73e8;
-        }
-        
-        .project-title a {
-            color: #1a73e8;
-            text-decoration: none;
-        }
-        
-        .project-period {
-            font-weight: 600;
-            color: #1a73e8;
-            font-size: 16px;
-            width: 120px;
-        }
-        
-        .project-description {
-            font-size: 16px;
-            padding-left: 135px;
-            color: #444;
-            line-height: 1.7;
-            text-align: justify;
-        }
-        
-        .project-tech {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-            margin-top: 10px;
-        }
-        
-        .tech-tag {
-            background: #e3f2fd;
-            color: #1a73e8;
-            border-radius: 3px;
-            padding: 3px 10px;
-            font-size: 14px;
-            font-weight: 500;
-        }
-        
-        .languages-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 10px;
-            margin-top: 10px;
-        }
-        
-        .language-row {
-            display: contents;
-        }
-        
-        .language-name {
-            font-weight: 600;
-            padding: 8px 0;
-            border-bottom: 1px dashed #e0e0e0;
-            font-size: 16px;
-        }
-        
-        .language-level {
-            padding: 8px 0;
-            border-bottom: 1px dashed #e0e0e0;
-            color: #555;
-            font-size: 16px;
-        }
-        
-        .interests-list {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-        }
-        
-        .interest-item {
-            background: white;
-            border: 1px solid #e0e0e0;
-            border-radius: 3px;
-            padding: 8px 15px;
-            font-size: 16px;
-            display: flex;
-            align-items: center;
-        }
-        
-        .interest-item i {
-            margin-right: 8px;
-            color: #1a73e8;
-        }
-        
-        .social-links {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 15px;
-            margin-top: 10px;
-        }
-        
-        .social-link {
-            display: flex;
-            align-items: center;
-            font-size: 16px;
-            color: #1a73e8;
-            text-decoration: none;
-        }
-        
-        .social-link i {
-            margin-right: 8px;
-            font-size: 18px;
-        }
-        
-        .expertise-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 15px;
-        }
-        
-        .expertise-item {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            font-size: 16px;
-        }
-        
-        @page {
-            width: 1110px;
-            height: 1791px;
-            margin: 0;
-        }
-        
-        @media print {
-            html, body {
-                margin: 0;
-                padding: 0;
-                background: white;
-            }
-            
-            .a4-container {
-                margin: 0;
-                box-shadow: none;
-                width: 100% !important;
-                min-height: 100vh !important;
-                overflow: visible;
-            }
-            
-            body {
-                padding: 0;
-            }
-        }
-    </style>
-</head>
-<body>
-    <div class="a4-container">
-        <div class="header">
-            <div class="profile-container">
-                <div class="profile-picture">
-                    <img src="https://raw.githubusercontent.com/Ahmad-J-Bary/my-cv/main/img.jpg" alt="Profile Picture">
-                </div>
-                <div class="name-title">
-                    <h1>Ahmad Abdelbary</h1>
-                    <h2>Network Engineer | Web & Software Developer</h2>
-                    <p class="profile-text">
-                        Current undergraduate with experience building mobile and web apps. Organized, detail-focused 
-                        and interested in improving my skills in mobile and web development. Ready to use my technical 
-                        knowledge and learn while working with teams.
-                    </p>
-                </div>
-            </div>
-            
-            <div class="contact-social-container">
-                <div class="contact-info">
-                    <p>
-                        <a href="mailto:ahmadabdelbary2001@gmail.com" style="color: white; text-decoration: none;">
-                            <i class="fas fa-envelope"></i> ahmadabdelbary2001@gmail.com
-                        </a>
-                    </p>
-                    <p><i class="fas fa-phone"></i> +963-982068307</p>
-                    <p><i class="fas fa-map-marker-alt"></i> Damascus, Syria</p>
-                </div>
-                
-                <div class="social-links-header">
-                    <a href="https://www.facebook.com/al.laith.311" class="social-link-header" target="_blank">
-                        <i class="fab fa-facebook"></i> Facebook
-                    </a>
-                    <a href="https://t.me/Ahmad_Abdelbary" class="social-link-header" target="_blank">
-                        <i class="fab fa-telegram"></i> Telegram
-                    </a>
-                    <a href="https://www.linkedin.com/in/ahmad-abdalbary-607378371" class="social-link-header" target="_blank">
-                        <i class="fab fa-linkedin"></i> LinkedIn
-                    </a>
-                    <a href="https://github.com/ahmadabdelbary2001" class="social-link-header" target="_blank">
-                        <i class="fab fa-github"></i> GitHub
-                    </a>
-                </div>
-            </div>
-        </div>
-        
-        <div class="content">
-            <div class="left-column">
-                <div class="section">
-                    <h3 class="section-title">SKILLS</h3>
-                    <div class="skills-grid">
-                        <div class="skill-category">
-                            <h3><i class="fas fa-code"></i> Programming Languages</h3>
-                            <div class="skills-list">
-                                <div class="skill-item">C</div>
-                                <div class="skill-item">C++</div>
-                                <div class="skill-item">C#</div>
-                                <div class="skill-item">Java</div>
-                                <div class="skill-item">Python</div>
-                                <div class="skill-item">Go</div>
-                                <div class="skill-item">Dart</div>
-                            </div>
-                        </div>
-                        
-                        <div class="skill-category">
-                            <h3><i class="fas fa-laptop-code"></i> Frontend Development</h3>
-                            <div class="skills-list">
-                                <div class="skill-item">HTML</div>
-                                <div class="skill-item">CSS</div>
-                                <div class="skill-item">JavaScript</div>
-                                <div class="skill-item">React</div>
-                                <div class="skill-item">Bootstrap</div>
-                                <div class="skill-item">TailwindCSS</div>
-                            </div>
-                        </div>
-                        
-                        <div class="skill-category">
-                            <h3><i class="fas fa-server"></i> Backend Development</h3>
-                            <div class="skills-list">
-                                <div class="skill-item">Spring Boot</div>
-                                <div class="skill-item">ASP.NET</div>
-                                <div class="skill-item">Node.js</div>
-                                <div class="skill-item">PHP</div>
-                            </div>
-                        </div>
-                        
-                        <div class="skill-category">
-                            <h3><i class="fas fa-database"></i> Databases</h3>
-                            <div class="skills-list">
-                                <div class="skill-item">MySQL</div>
-                                <div class="skill-item">Oracle</div>
-                            </div>
-                        </div>
-                        
-                        <div class="skill-category">
-                            <h3><i class="fas fa-mobile-alt"></i> Mobile Development</h3>
-                            <div class="skills-list">
-                                <div class="skill-item">Java (Android)</div>
-                                <div class="skill-item">Kotlin</div>
-                                <div class="skill-item">Flutter</div>
-                            </div>
-                        </div>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-                        <div class="skill-category">
-                            <h3><i class="fas fa-cogs"></i> Development Tools</h3>
-                            <div class="skills-list">
-                                <div class="skill-item">Docker</div>
-                                <div class="skill-item">Kubernetes</div>
-                                <div class="skill-item">npm/yarn</div>
-                                <div class="skill-item">Maven</div>
-                                <div class="skill-item">NuGet</div>
-                            </div>
-                        </div>
-                        
-                        <div class="skill-category">
-                            <h3><i class="fas fa-vial"></i> Testing Tools</h3>
-                            <div class="skills-list">
-                                <div class="skill-item">Jest</div>
-                                <div class="skill-item">JUnit</div>
-                                <div class="skill-item">Unit Testing (Java)</div>
-                                <div class="skill-item">Postman</div>
-                                <div class="skill-item">Swagger</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="section">
-                    <h3 class="section-title">LANGUAGES</h3>
-                    <div class="languages-grid">
-                        <div class="language-row">
-                            <div class="language-name">Arabic</div>
-                            <div class="language-level">Native</div>
-                        </div>
-                        <div class="language-row">
-                            <div class="language-name">English</div>
-                            <div class="language-level">Advanced</div>
-                        </div>
-                        <div class="language-row">
-                            <div class="language-name">French</div>
-                            <div class="language-level">Basic</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="section">
-                    <h3 class="section-title">INTERESTS</h3>
-                    <div class="interests-list">
-                        <div class="interest-item"><i class="fas fa-chess"></i> Chess</div>
-                        <div class="interest-item"><i class="fas fa-table-tennis"></i> Badminton</div>
-                        <div class="interest-item"><i class="fas fa-swimmer"></i> Swimming</div>
-                        <div class="interest-item"><i class="fas fa-dice"></i> Card games</div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="right-column">
-                <div class="section">
-                    <h3 class="section-title">EDUCATION</h3>
-                    <div class="education-item">
-                        <div class="education-header">
-                            <div class="education-period">2019 - Present</div>
-                            <div class="education-title">
-                                <a href="https://hiast.edu.sy/" target="_blank">
-                                    Higher Institute of Applied Sciences and Technology (HIAST)
-                                </a>
-                            </div>
-                        </div>
-                        <div class="education-description">
-                            Studies include Web and Mobile Application Development, Advanced Programming, 
-                            Distributed Systems, Software Engineering, Database Management, and AI Model Training.
-                        </div>
-                    </div>
-                    
-                    <div class="education-item">
-                        <div class="education-header">
-                            <div class="education-period">2016 - 2019</div>
-                            <div class="education-title">Secondary Education (Scientific Branch), Al-Kindi High School, Aleppo</div>
-                        </div>
-                        <div class="education-description">
-                            Completed a science-focused curriculum, sparking my interest in technology 
-                            and laying the foundation for my technical skills.
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="section">
-                    <h3 class="section-title">PROJECTS & ACHIEVEMENTS</h3>
-                    
-                    <!-- Ordered by date (newest first) -->
-                    <div class="project-item">
-                        <div class="project-header">
-                            <div class="project-period">2025-2026</div>
-                            <div class="project-title">
-                                <a href="https://github.com/ahmadabdelbary2001/Mediplus-Spring-FullStack" target="_blank">MediPlus Clinic Management System</a>
-                            </div>
-                        </div>
-                        <div class="project-description">
-                            Built using Spring Boot with RESTful APIs, Spring Data JPA, and MySQL, featuring CRUD operations, 
-                            self appointment logic, Postman and Swagger documentation for API testing.
-                        </div>
-                        <div class="project-tech">
-                            <div class="tech-tag">Spring Boot</div>
-                            <div class="tech-tag">Bootstrap</div>
-                            <div class="tech-tag">AJAX</div>
-                            <div class="tech-tag">MySQL</div>
-                            <div class="tech-tag">JPA</div>
-                            <div class="tech-tag">RESTful APIs</div>
-                            <div class="tech-tag">Postman</div>
-                        </div>
-                    </div>
-                    
-                    <div class="project-item">
-                        <div class="project-header">
-                            <div class="project-period">2024-2025</div>
-                            <div class="project-title">
-                                <a href="https://github.com/ahmadabdelbary2001/Java-RMI-Chat-Application" target="_blank">Java Chat Server & Client</a>
-                            </div>
-                        </div>
-                        <div class="project-description">
-                            Built a GUI-based client-server chat application using RMI for distributed system communications.
-                        </div>
-                        <div class="project-tech">
-                            <div class="tech-tag">Java</div>
-                            <div class="tech-tag">RMI</div>
-                            <div class="tech-tag">Distributed Systems</div>
-                            <div class="tech-tag">GUI</div>
-                        </div>
-                    </div>
-                    
-                    <div class="project-item">
-                        <div class="project-header">
-                            <div class="project-period">2024-2025</div>
-                            <div class="project-title">
-                                <a href="https://github.com/ahmadabdelbary2001/MVC-Banking-System" target="_blank">Web-Based Banking Interface</a>
-                            </div>
-                        </div>
-                        <div class="project-description">
-                            Built a web application with HTML, CSS, JavaScript, and ASP.NET for backend logic. 
-                            Integrated a database to manage user accounts and transactions, with features for 
-                            authentication, transfers, and dynamic balance updates. Designed a responsive interface.
-                        </div>
-                        <div class="project-tech">
-                            <div class="tech-tag">HTML/CSS/JS</div>
-                            <div class="tech-tag">ASP.NET</div>
-                            <div class="tech-tag">Database</div>
-                            <div class="tech-tag">Responsive Design</div>
-                        </div>
-                    </div>
-                    
-                    <div class="project-item">
-                        <div class="project-header">
-                            <div class="project-period">2023-2024</div>
-                            <div class="project-title">
-                                <a href="https://github.com/ahmadabdelbary2001/Flutter-GPS-Changer" target="_blank">GPS Changer</a>
-                            </div>
-                        </div>
-                        <div class="project-description">
-                            Developed a GPS spoofing app in Flutter and Kotlin to simulate different geographic locations on mobile devices.
-                        </div>
-                        <div class="project-tech">
-                            <div class="tech-tag">Flutter</div>
-                            <div class="tech-tag">Dart</div>
-                            <div class="tech-tag">Kotlin</div>
-                            <div class="tech-tag">Android</div>
-                            <div class="tech-tag">Geolocation API</div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="section">
-                    <h3 class="section-title">EXPERTISE</h3>
-                    <div class="expertise-grid">
-                        <div class="expertise-item">
-                            <i class="fas fa-check-circle"></i>
-                            Scalable Applications Development
-                        </div>
-                        <div class="expertise-item">
-                            <i class="fas fa-check-circle"></i>
-                            Cross-Platform Mobile Solutions
-                        </div>
-                        <div class="expertise-item">
-                            <i class="fas fa-check-circle"></i>
-                            Distributed Systems Architecture
-                        </div>
-                        <div class="expertise-item">
-                            <i class="fas fa-check-circle"></i>
-                            Network Programming & Security
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</body>
-</html>
+body {
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+    line-height: 1.6;
+    background: white;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+
+.a4-container {
+    max-width: 1150px;
+    background: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 100vw;
+}
+
+.header {
+    background: #1a73e8;
+    color: white;
+    padding: 30px 40px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.profile-container {
+    display: flex;
+    align-items: flex-start;
+    gap: 30px;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.profile-picture {
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    border: 4px solid rgba(255, 255, 255, 0.3);
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.profile-picture img {
+    width: 120%;
+    height: 120%;
+    object-fit: cover;
+}
+
+.name-title {
+    flex: 1;
+    padding-top: 10px;
+}
+
+.name-title h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.name-title h2 {
+    font-size: 24px;
+    font-weight: 400;
+    opacity: 0.9;
+    margin-bottom: 20px;
+}
+
+.profile-text {
+    font-size: 18px;
+    line-height: 1.7;
+    color: rgba(255, 255, 255, 0.9);
+    width: 800px;
+    text-align: justify;
+}
+
+.contact-social-container {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.contact-info {
+    text-align: left;
+}
+
+.contact-info p {
+    margin: 8px 0;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+}
+
+.contact-info i {
+    width: 22px;
+    text-align: center;
+    margin-right: 12px;
+    font-size: 18px;
+}
+
+.social-links-header {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: flex-end;
+}
+
+.social-link-header {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    color: white;
+    text-decoration: none;
+    padding: 8px 15px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 3px;
+}
+
+.social-link-header i {
+    margin-right: 8px;
+    font-size: 18px;
+}
+
+.content {
+    display: flex;
+    padding: 0;
+    height: auto;
+}
+
+.left-column {
+    width: 385px;
+    background: #f8f9fa;
+    padding: 30px;
+    border-right: 1px solid #eaeaea;
+}
+
+.right-column {
+    width: 715px;
+    padding: 30px;
+}
+
+.section {
+    margin-bottom: 25px;
+}
+
+.section-title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 24px;
+    color: #1a73e8;
+    padding-bottom: 8px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+}
+
+.skill-category {
+    margin-bottom: 10px;
+}
+
+.skill-category h3 {
+    font-size: 18px;
+    color: #1a73e8;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+}
+
+.skill-category h3 i {
+    margin-right: 8px;
+    color: #1a73e8;
+    font-size: 16px;
+}
+
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+.skill-item {
+    background: white;
+    border: 1px solid #e0e0e0;
+    border-radius: 3px;
+    padding: 4px 8px;
+    font-size: 14px;
+}
+
+.education-item {
+    margin-bottom: 20px;
+}
+
+.education-header {
+    display: flex;
+    align-items: baseline;
+    gap: 15px;
+    margin-bottom: 5px;
+}
+
+.education-period {
+    font-weight: 600;
+    color: #1a73e8;
+    font-size: 16px;
+    width: 120px;
+}
+
+.education-title {
+    font-weight: 600;
+    font-size: 18px;
+    color: #1a73e8;
+}
+
+.education-title a {
+    color: #1a73e8;
+    text-decoration: none;
+}
+
+.education-description {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.6;
+    margin-top: 8px;
+    padding-left: 135px;
+    text-align: justify;
+}
+
+.project-item {
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+}
+
+.project-item:not(:last-child) {
+    border-bottom: 1px solid #eaeaea;
+}
+
+.project-header {
+    display: flex;
+    align-items: baseline;
+    gap: 15px;
+    margin-bottom: 5px;
+}
+
+.project-title {
+    font-weight: 600;
+    font-size: 18px;
+    color: #1a73e8;
+}
+
+.project-title a {
+    color: #1a73e8;
+    text-decoration: none;
+}
+
+.project-period {
+    font-weight: 600;
+    color: #1a73e8;
+    font-size: 16px;
+    width: 120px;
+}
+
+.project-description {
+    font-size: 16px;
+    padding-left: 135px;
+    color: #444;
+    line-height: 1.7;
+    text-align: justify;
+}
+
+.project-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 10px;
+}
+
+.tech-tag {
+    background: #e3f2fd;
+    color: #1a73e8;
+    border-radius: 3px;
+    padding: 3px 10px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.languages-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.language-row {
+    display: contents;
+}
+
+.language-name {
+    font-weight: 600;
+    padding: 8px 0;
+    border-bottom: 1px dashed #e0e0e0;
+    font-size: 16px;
+}
+
+.language-level {
+    padding: 8px 0;
+    border-bottom: 1px dashed #e0e0e0;
+    color: #555;
+    font-size: 16px;
+}
+
+.interests-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.interest-item {
+    background: white;
+    border: 1px solid #e0e0e0;
+    border-radius: 3px;
+    padding: 8px 15px;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+}
+
+.interest-item i {
+    margin-right: 8px;
+    color: #1a73e8;
+}
+
+.social-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.social-link {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    color: #1a73e8;
+    text-decoration: none;
+}
+
+.social-link i {
+    margin-right: 8px;
+    font-size: 18px;
+}
+
+.expertise-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.expertise-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 16px;
+}
+
+@page {
+    width: 1110px;
+    height: 1791px;
+    margin: 0;
+}
+
+@media print {
+    html, body {
+        margin: 0;
+        padding: 0;
+        background: white;
+    }
+    
+    .a4-container {
+        margin: 0;
+        box-shadow: none;
+        width: 100% !important;
+        min-height: 100vh !important;
+        overflow: visible;
+    }
+    
+    body {
+        padding: 0;
+    }
+}
